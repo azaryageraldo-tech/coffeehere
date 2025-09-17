@@ -1,0 +1,278 @@
+/* Menggunakan variabel warna dari style1.css jika terhubung */
+:root {
+  --primary: #7a5541;
+  --secondary: #d6a85c;
+  --background: #f4f1ee;
+  --accent: #a87c5f;
+  --text: #3e2b23;
+  --card-bg: #fffaf5;
+  --shadow: 0 4px 16px rgba(122,85,65,0.08);
+  --radius: 16px;
+  --font-main: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* === PERBAIKAN FOOTER & STRUKTUR DASAR === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: var(--font-main);
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* === HEADER & NAVIGASI KONSISTEN (VERSI FINAL) === */
+header {
+  background-color: var(--primary);
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 28px;
+  color: var(--secondary);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.08);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item .nav-link {
+  text-decoration: none;
+  color: #fffaf5;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+  background: var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#menu-open-button,
+#menu-close-button {
+  display: none;
+  font-size: 26px;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === BAGIAN KHUSUS HALAMAN MENU === */
+
+/* Tab Logic */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Judul Section (Coffee, Non Coffee, dll) */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Tab Menu Modern */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 12px 28px;
+  border: 2px solid #dcd1c4;
+  background-color: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  border-radius: 50px; /* Bentuk pil */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-main);
+}
+
+.tab:hover {
+  background-color: #f5efe7;
+  border-color: var(--primary);
+}
+
+.tab.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(122, 85, 65, 0.2);
+}
+
+/* Kartu Menu Modern */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+}
+
+.menu-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(122, 85, 65, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0e6dd;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(122, 85, 65, 0.15);
+}
+
+.menu-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Gambar bulat */
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(122, 85, 65, 0.1);
+  padding: 5px;
+  background: #fff;
+}
+
+.menu-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-family: var(--font-main);
+}
+
+.menu-price {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-family: var(--font-main);
+}
+
+.menu-desc {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.6;
+  font-family: var(--font-main);
+}
+
+/* === RESPONSIVE (FINAL) === */
+@media (max-width: 700px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Pengaturan Umum Mobile */
+  .menu-tabs {
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .menu-list {
+      padding: 0 15px;
+  }
+
+  /* Navigasi Mobile */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+  }
+   .logo-text {
+    font-size: 1.5rem;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 20px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  #menu-open-button {
+    display: block;
+  }
+  #menu-close-button {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  .nav-menu.open .nav-item .nav-link {
+    font-size: 1.5rem; /* Perbesar font */
+    padding: 15px; /* Perbesar area klik */
+    text-align: center;
+    width: 100%;
+}
+
+.nav-menu.open .nav-item .nav-link.active {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 8px;
+}
+}

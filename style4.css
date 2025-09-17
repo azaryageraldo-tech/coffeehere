@@ -1,0 +1,310 @@
+/* Menggunakan variabel dari style1.css untuk konsistensi */
+:root {
+  --primary: #7a5541;
+  --secondary: #d6a85c;
+  --background: #f4f1ee;
+  --card-bg: #fffaf5;
+  --text: #3e2b23;
+  --radius: 16px;
+  --font-main: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* === PERBAIKAN FOOTER & STRUKTUR DASAR === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: var(--font-main);
+  color: var(--text);
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* === HEADER & NAVIGASI KONSISTEN (VERSI FINAL) === */
+header {
+  background-color: var(--primary);
+  padding: 15px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.nav-logo {
+  text-decoration: none;
+}
+.logo-text {
+  font-size: 28px;
+  color: var(--secondary);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.08);
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.nav-item .nav-link {
+  text-decoration: none;
+  color: #fffaf5;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+  background: var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+}
+#menu-open-button,
+#menu-close-button {
+  display: none;
+  font-size: 26px;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === HALAMAN GALERI === */
+.gallery-section {
+  background-color: #fff;
+  padding: 80px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.gallery-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 50px;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: 400px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+}
+
+/* === HALAMAN CONTACT (MODERN) === */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact-section .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  align-items: flex-start;
+}
+.contact-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--background);
+  border-radius: 12px;
+  padding: 18px 22px;
+  border: 1px solid #e9e0d7;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.contact-info:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(122, 85, 65, 0.1);
+  border-color: var(--secondary);
+}
+.contact-info i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background-color: #e9e0d7;
+  padding: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info p { margin: 0; font-weight: 500; }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+.form-input {
+  padding: 16px 20px;
+  border: 1px solid #e0d5c8;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(122, 85, 65, 0.15);
+  outline: none;
+}
+textarea.form-input { min-height: 150px; resize: vertical; }
+.submit-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.submit-button:hover {
+  background-color: #634331;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(122, 85, 65, 0.25);
+}
+
+/* === FOOTER KONSISTEN === */
+footer { background-color: var(--primary); color: white; }
+
+/* === RESPONSIVE (FINAL) === */
+@media (max-width: 900px) {
+    .contact-section .section-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+  /* Pengaturan Umum Mobile */
+  .gallery-section, .contact-section {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+      font-size: 1rem;
+      margin-bottom: 30px;
+  }
+  .contact-info {
+      padding: 15px;
+      gap: 15px;
+  }
+  .contact-info i {
+      font-size: 1.2rem;
+  }
+
+  /* Navigasi Mobile */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 20px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  #menu-open-button {
+    display: block;
+  }
+  #menu-close-button {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  
+  /* Galeri Mobile */
+  .swiper-slide {
+    width: 280px;
+    height: 360px;
+  }
+  .nav-menu.open .nav-item .nav-link {
+    font-size: 1.5rem; /* Perbesar font */
+    padding: 15px; /* Perbesar area klik */
+    text-align: center;
+    width: 100%;
+}
+
+.nav-menu.open .nav-item .nav-link.active {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 8px;
+}
+}

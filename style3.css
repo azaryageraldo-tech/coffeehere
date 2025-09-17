@@ -1,0 +1,295 @@
+/* Menggunakan variabel dari style1.css untuk konsistensi */
+:root {
+  --primary: #7a5541;
+  --secondary: #d6a85c;
+  --background: #f4f1ee;
+  --card-bg: #fffaf5;
+  --text: #3e2b23;
+  --radius: 16px;
+  --font-main: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* === PERBAIKAN FOOTER & STRUKTUR DASAR === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: var(--font-main);
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* === HEADER & NAVIGASI KONSISTEN (VERSI FINAL) === */
+header {
+  background-color: var(--primary);
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 28px;
+  color: var(--secondary);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.08);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item .nav-link {
+  text-decoration: none;
+  color: #fffaf5;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+  background: var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#menu-open-button,
+#menu-close-button {
+  display: none;
+  font-size: 26px;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === BAGIAN KHUSUS HALAMAN TESTIMONIALS === */
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Bagian Testimonials */
+.testimonials {
+  padding: 80px 20px;
+  background-color: #fff; /* Latar putih bersih untuk section ini */
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px; /* Ruang untuk pagination */
+}
+
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 30px;
+  border: 1px solid #f0e6dd;
+  box-shadow: 0 4px 20px rgba(122, 85, 65, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Membuat teks mengisi ruang yang tersedia */
+  font-size: 1rem;
+}
+
+.testimonial-text::before {
+  content: '“';
+  font-size: 3rem;
+  color: var(--secondary);
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto; /* Mendorong author ke bawah kartu */
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+}
+
+.author-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.author-info span {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+}
+
+/* Bagian Menu Favorit */
+.favorite-menu {
+  padding: 80px 20px;
+  background-color: var(--background);
+}
+
+.favorite-list {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(122, 85, 65, 0.1);
+  overflow: hidden; /* Agar border-radius bekerja pada item di dalamnya */
+}
+
+.favorite-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #f0e6dd;
+  transition: background-color 0.3s;
+}
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.favorite-item:hover {
+  background-color: var(--card-bg);
+}
+
+.menu-name {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.rating {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.order-count {
+  color: #777;
+  font-size: 0.9rem;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* === RESPONSIVE (FINAL) === */
+@media (max-width: 768px) {
+  .favorite-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .order-count {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Pengaturan Umum Mobile */
+ .testimonials, .favorite-menu {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  /* Navigasi Mobile */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 20px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  #menu-open-button {
+    display: block;
+  }
+  #menu-close-button {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  .nav-menu.open .nav-item .nav-link {
+    font-size: 1.5rem; /* Perbesar font */
+    padding: 15px; /* Perbesar area klik */
+    text-align: center;
+    width: 100%;
+}
+
+.nav-menu.open .nav-item .nav-link.active {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 8px;
+}
+}

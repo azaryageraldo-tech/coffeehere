@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | Coffee Here</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar section-content">
+      <a href="#" class="nav-logo">
+        <h2 class="logo-text">☕ Coffee Here</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+        <li class="nav-item"><a href="testy.html" class="nav-link active">Testimonials</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="testimonials" id="testimonials">
+      <h2 class="title" data-aos="fade-up">Apa Kata Mereka?</h2>
+      <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-card">
+            <p class="testimonial-text">"Cappucino di cafe ini memiliki rasa kopi seimbang dengan susu yang creamy, foam-nya halus dan aromanya kuat. Cocok untuk penikmat kopi ringan."</p>
+            <div class="testimonial-author">
+              <img src="Gambar1.jpeg" alt="Valen" />
+              <div class="author-info">
+                <h3>Valen</h3>
+                <span>Pecinta Kopi</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <p class="testimonial-text">"Croissant disini memiliki rasa yang renyah di luar, lembut dan sedikit manis di dalam. Cocok untuk sarapan atau camilan sore."</p>
+            <div class="testimonial-author">
+              <img src="Gambar2.jpeg" alt="Olip" />
+              <div class="author-info">
+                <h3>Olip</h3>
+                <span>Pelanggan Setia</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <p class="testimonial-text">"Matcha Latte di cafe ini mempunyai rasa matcha-nya terasa alami dan tidak pahit. Disajikan hangat maupun dingin tetap enak."</p>
+            <div class="testimonial-author">
+              <img src="Gambar3.jpeg" alt="Sasa" />
+              <div class="author-info">
+                <h3>Sasa</h3>
+                <span>Mahasiswa</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <p class="testimonial-text">"Cromboloni di cafe ini mempunyai tekstur renyah di luar dan lembut di dalam. Isian manis seperti cokelat yang meleleh di mulut."</p>
+            <div class="testimonial-author">
+              <img src="Gambar4.jpeg" alt="Novi" />
+              <div class="author-info">
+                <h3>Novi</h3>
+                <span>Pekerja Kantoran</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="favorite-menu" data-aos="fade-up">
+        <h2 class="title">Menu Favorit Pelanggan</h2>
+        <div class="favorite-list">
+            <div class="favorite-item">
+                <span class="menu-name">Coffee Latte</span>
+                <span class="rating">★★★★★</span>
+                <span class="order-count">150+ Pesanan</span>
+            </div>
+            <div class="favorite-item">
+                <span class="menu-name">Redvelvet</span>
+                <span class="rating">★★★★☆</span>
+                <span class="order-count">98+ Pesanan</span>
+            </div>
+            <div class="favorite-item">
+                <span class="menu-name">Croissant</span>
+                <span class="rating">★★★★★</span>
+                <span class="order-count">80+ Pesanan</span>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-3" style="background-color: #7a5541; color: white;">
+    &copy; 2025 Coffee Shop &bull; Privacy policy &bull; Refund policy
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script3.js"></script> <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

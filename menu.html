@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Coffee Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">☕ Coffee Here</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li class="nav-item"><a href="testy.html" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-tabs" data-aos="fade-up">
+            <button class="tab active" onclick="showTab('coffee')">Coffee</button>
+            <button class="tab" onclick="showTab('noncoffee')">Non Coffee</button>
+            <button class="tab" onclick="showTab('pastry')">Pastry</button>
+        </div>
+        <section id="coffee" class="tab-content active">
+            <h2 class="section-title" data-aos="fade-up">Coffee</h2>
+            <div class="menu-list">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="asset/Americanoo.png" alt="Americano">
+                    <div class="menu-title">Iced Americano</div>
+                    <div class="menu-price">Rp 17.000</div>
+                    <div class="menu-desc">Espresso shot yang dicampur dengan segelas air menghadirkan karakter, aroma, dan rasa yang ideal.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="asset/caramel .png" alt="Caramel">
+                    <div class="menu-title">Coffee Caramel</div>
+                    <div class="menu-price">Rp 24.000</div>
+                    <div class="menu-desc">Manisnya caramel berpadu sempurna dengan aroma kopi yang menggoda.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="asset/latte.png" alt="Latte">
+                    <div class="menu-title">Coffee Latte</div>
+                    <div class="menu-price">Rp 22.000</div>
+                    <div class="menu-desc">Rasa kopi yang halus bertemu dengan krim susu yang lembut sempurna.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="asset/cappucino.png" alt="Cappucino">
+                    <div class="menu-title">Cappucino</div>
+                    <div class="menu-price">Rp 20.000</div>
+                    <div class="menu-desc">Perpaduan sempurna antara ekspresso pekat, lembutnya susu, dan buih susu yang tebal.</div>
+                </div>
+            </div>
+        </section>
+        <section id="noncoffee" class="tab-content">
+            <h2 class="section-title">Non Coffee</h2>
+            <div class="menu-list">
+                <div class="menu-card" data-aos="fade-up">
+                    <img src="asset/coklat.png" alt="Milk Coklat">
+                    <div class="menu-title">Milk Coklat</div>
+                    <div class="menu-price">Rp 23.000</div>
+                    <div class="menu-desc">Coklat yang berpadu pada susu sehingga menciptakan rasa klasik yang tidak pernah salah.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="asset/machaa.png" alt="Macha">
+                    <div class="menu-title">Macha</div>
+                    <div class="menu-price">Rp 24.000</div>
+                    <div class="menu-desc">Perpaduan sempurna antara susu yang lembut dan akar macha penuh energi sehingga menciptakan rasa yang segar.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="asset/redvelvet.png" alt="Redvelvet">
+                    <div class="menu-title">Redvelvet</div>
+                    <div class="menu-price">Rp 24.000</div>
+                    <div class="menu-desc">Minuman berwarna merah menggoda yang memiliki rasa lembut seperti kue favoritmu.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="asset/lychee.png" alt="Lychee Tea">
+                    <div class="menu-title">Lychee Tea</div>
+                    <div class="menu-price">Rp 12.000</div>
+                    <div class="menu-desc">Perpaduan antara tea dan buah lychee yang dijadikan satu sehingga menjadi minuman yang segar.</div>
+                </div>
+            </div>
+        </section>
+        <section id="pastry" class="tab-content">
+            <h2 class="section-title">Pastry</h2>
+            <div class="menu-list">
+                <div class="menu-card" data-aos="fade-up">
+                    <img src="asset/croissant.png" alt="Croissant">
+                    <div class="menu-title">Croissant</div>
+                    <div class="menu-price">Rp 20.000</div>
+                    <div class="menu-desc">Lapisan demi lapisan renyah, lembut didalam, wangi mentega yang menggoda.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="asset/crombolloni.png" alt="Crombolloni">
+                    <div class="menu-title">Crombolloni</div>
+                    <div class="menu-price">Rp 20.000</div>
+                    <div class="menu-desc">Lapisan pastry renyah yang dibalut dengan lelehan coklat lumer didalamnya.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="asset/PAIN.png" alt="Chocolate Croissant">
+                    <div class="menu-title">Chocolate Croissant</div>
+                    <div class="menu-price">Rp 20.000</div>
+                    <div class="menu-desc">Lapisan croissant yang renyah berpadu dengan isi coklat lumer yang manis dan menggoda.</div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="asset/donat.png" alt="Doughnut">
+                    <div class="menu-title">Doughnut</div>
+                    <div class="menu-price">Rp 15.000</div>
+                    <div class="menu-desc">Tekstur yang lembut dan memiliki topping coklat yang menggoda.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3" style="background-color: #7a5541; color: white;">
+        &copy; 2025 Coffee Shop &bull; Privacy policy &bull; Refund policy
+    </footer>
+
+    <script>
+    function showTab(tabId) {
+        document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
+        document.querySelector('.tab[onclick="showTab(\''+tabId+'\')"]').classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+    </script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
